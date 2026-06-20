@@ -1,100 +1,33 @@
-# Starving_Game
+# 🍽️ STARVING
+**Um jogo de dedução social, blefe e fome.**
 
-🍽️ REGRA GLOBAL: A MATEMÁTICA DA FOME
+---
 
-Vida Máxima: Todos os jogadores começam com 3 HP. A vida é secreta.
+## 📖 A História
 
-O Dano Diário: Ao amanhecer, se o número de pratos intactos na mesa for menor que o número de jogadores famintos, a conta não fecha. Todos os famintos perdem 1 de Vida.
+Você acorda trancafiado no salão principal de um restaurante que um dia já foi luxuoso, mas agora tem as portas seladas de forma impenetrável. Não há como fugir, e a regra de sobrevivência imposta pelos seus captores é simples: **quem ficar sem comer, morre de fome.**
 
-Imunidade (Saciados): Jogadores que comerem com sucesso durante a noite não entram na conta dos famintos e não sofrem dano de inanição no dia seguinte.
+Todos os dias, misteriosamente, pratos de comida são colocados nas mesas, mas nunca o suficiente para todos. Pior ainda: no escuro da noite, criaturas egoístas e ameaças se esgueiram pelo restaurante para devorar a comida dos outros. 
 
+Para sobreviver, o grupo precisa conversar durante o dia, descobrir quem está roubando a comida e expulsar os parasitas do restaurante antes que o último prato fique vazio. Em quem você confia quando a fome aperta?
 
+---
 
-🔴 FACÇÃO DAS AMEAÇAS (O Mal)
-Objetivo: Eliminar os Convidados ou igualar o número de sobreviventes na mesa.
+## ⚙️ Regras Principais
 
-1. O Glutão
-Ícone: Carinha de monstro babando com dentes serrilhados.
+O jogo alterna entre duas fases até que uma das facções saia vitoriosa:
 
-Ação Noturna: Escolhe 1 prato para devorar.
+*   **🌙 A Noite:** Jogadores de olhos fechados. O aplicativo acorda secretamente jogadores com habilidades especiais. Ameaças atacam a comida, investigadores buscam pistas e defensores protegem os pratos.
+*   **☀️ O Dia:** Todos abrem os olhos e debatem livremente. Mentiras, acusações e deduções tomam conta da mesa.
+*   **🗳️ A Votação:** Ao fim do dia, o jogador que receber mais votos é expulso do restaurante.
 
-Regras e Efeitos: O prato desaparece da mesa. O Glutão acorda Saciado (imune à fome). Ele não sabe quem é o Rato.
+### 🎭 Quer conhecer todos os personagens e a fundo como o jogo funciona?
+👉 **[CLIQUE AQUI PARA LER O GUIA COMPLETO DE CARGOS E MECÂNICAS](docs/CARGOS_E_REGRAS.md)** 👈
 
-Colisão: Se dois Glutões atacarem o mesmo prato (ou se colidirem com o Ansioso), o prato quebra e ninguém come. Ambos acordam Famintos.
+---
 
-2. O Rato
-Ícone: Perfil de um rato com destaque no focinho.
+## 🛠️ Tecnologias Utilizadas
 
-Ação Noturna: Escolhe farejar 1 Pessoa OU farejar até 2 Pratos.
-
-Regras e Efeitos: Age antes de todos. Se cheirar uma pessoa, descobre o cargo exato dela. Se cheirar pratos, envia um alerta secreto aos Glutões indicando se o Cozinheiro ou o Mordomo mexeram ali.
-
-Limitação: Não come à noite. Acorda Faminto. Sabe quem são os Glutões, mas os Glutões não sabem quem ele é.
-
-
-
-🔵 FACÇÃO DOS CONVIDADOS (A Vila)
-Objetivo: Deduzir e expulsar todas as Ameaças antes de morrerem de fome.
-
-3. O Mordomo
-Ícone: Mão com luva branca segurando uma tampa de prata (cloche).
-
-Ação Noturna: Escolhe 1 prato para proteger.
-
-Regras e Efeitos: É o primeiro a agir nos pratos. Bloqueia o roubo do Glutão e cancela o tempero do Cozinheiro. Acorda Faminto.
-Feedback: No dia seguinte, recebe um aviso em segredo apenas se o seu escudo tiver bloqueado um ataque com sucesso.
-
-4. O Cozinheiro
-Ícone: Chapéu de Chef clássico.
-
-Ação Noturna: Escolhe 1 prato para temperar com Sal (+1 HP) ou Pimenta (-1 HP).
-
-Regras e Efeitos: Possui apenas 2 Sais e 2 Pimentas para o jogo todo. O tempero fica oculto e afeta quem engolir aquele prato de madrugada. Acorda Faminto.
-
-Colisão: Se temperar o prato protegido pelo Mordomo, a ação falha e o tempero não é gasto.
-
-5. O Ansioso
-Ícone: Carinha redonda com gota de suor.
-
-Ação Noturna: Escolhe 1 prato para devorar por impulso.
-
-Regras e Efeitos: O prato não some, mas fica vazio. Ele acorda Saciado (imune à fome coletiva) e engole qualquer tempero que estiver no prato (sofrendo o dano ou a cura).
-
-Risco: Não enxerga os alertas do Rato. Se colidir com um Glutão no mesmo prato, o prato quebra e ele acorda Faminto.
-
-6. O Fofoqueiro
-Ícone: Lupa grossa de detetive.
-
-Ação Noturna: Escolhe 1 jogador para investigar a movimentação.
-
-Regras e Efeitos: O aplicativo revela se o alvo "Tocou em um prato" ou "Não tocou em um prato" naquela noite. Acorda Faminto.
-
-Risco Letal: Morre instantaneamente se investigar o Egoísta.
-
-7. O Aristocrata
-Ícone: Cartola elegante.
-
-Ação Noturna: Nenhuma (Dorme e acorda Faminto).
-
-Regras e Efeitos (Diurno): O seu voto para expulsão durante a fase do dia tem peso 2.
-
-8. O Segurança
-Ícone: Câmera de vigilância apontada para baixo.
-
-Ação Noturna: Nenhuma (Dorme e acorda Faminto).
-
-Regras e Efeitos (Diurno): Nunca é o primeiro nem o último a votar. É posicionado aleatoriamente no meio da fila de votação e consegue enxergar o placar parcial (quem votou em quem) antes de confirmar o seu próprio voto.
-
-
-
-🟡 FACÇÃO NEUTRA (O Caos)
-Objetivo: Sobreviver até o final da partida ou ser o único sobrevivente da explosão.
-
-9. O Egoísta
-Ícone: Coroa torta.
-
-Ação Noturna: Escolhe 1 jogador como alvo do seu rancor.
-
-Regras e Efeitos (Noturno): Elimina o Fofoqueiro instantaneamente caso seja investigado. Acorda Faminto.
-
-Regras e Efeitos (Diurno): Se for o jogador com mais votos e acabar expulso da mesa, ele surta e causa dano em área. Todos os vivos perdem 1 de Vida. O jogador que ele marcou à noite perde 2 de Vida. Os pratos são repostos na quantidade exata de sobreviventes.
+*   **Engine:** Godot Engine
+*   **Linguagem:** GDScript 
+*   **UI/UX:** Flat Design focado em usabilidade mobile e acessibilidade.
