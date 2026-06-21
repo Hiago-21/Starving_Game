@@ -13,7 +13,17 @@ Para sobreviver, o grupo precisa conversar durante o dia, descobrir quem está r
 
 ---
 
-## ⚙️ Regras Principais
+## ⚙️ A Matemática da Fome
+
+O coração do jogo é a sobrevivência. Diferente de outros jogos do gênero, não há assassinatos diretos noturnos; os jogadores morrem por inanição.
+
+*   **Vida Máxima:** Todos os jogadores começam com **3 HP**. A vida de cada um é secreta.
+*   **O Dano Diário:** Ao amanhecer, se o número de pratos intactos na mesa for menor que o número de jogadores famintos, a conta não fecha. Todos os jogadores famintos perdem **1 de Vida**.
+*   **Imunidade (Saciados):** Jogadores que conseguirem comer com sucesso durante a noite não entram na conta dos famintos e não sofrem o dano de inanição no dia seguinte.
+
+---
+
+## 🕒 Momentos Principais
 
 O jogo alterna entre duas fases até que uma das facções saia vitoriosa:
 
