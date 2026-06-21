@@ -32,7 +32,7 @@ O jogo alterna entre duas fases até que uma das facções saia vitoriosa:
 *   **🗳️ A Votação:** Ao fim do dia, o jogador que receber mais votos é expulso do restaurante.
 
 ### 🎭 Quer conhecer todos os personagens e a fundo como o jogo funciona?
-👉 **[CLIQUE AQUI PARA LER O GUIA COMPLETO DE CARGOS E MECÂNICAS](docs/CARGOS_E_REGRAS.md)** 👈
+👉 **[CLIQUE AQUI PARA LER O GUIA COMPLETO DE CARGOS E MECÂNICAS](https://hiago-21.github.io/Starving_Game/)** 👈
 
 ---
 
