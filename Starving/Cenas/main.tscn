@@ -1,0 +1,422 @@
+[gd_scene format=3 uid="uid://ynvut4k7n04k"]
+
+[ext_resource type="Script" uid="uid://drbary8ab45ef" path="res://Cenas/main.gd" id="1_x3hk2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x3hk2"]
+bg_color = Color(0.09379136, 0.16851482, 0.34710014, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_x3hk2"]
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_74bqr"]
+font_size = 60
+
+[sub_resource type="LabelSettings" id="LabelSettings_ruij7"]
+font_size = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_lb8y5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ja1os"]
+font_size = 30
+
+[node name="Main" type="Control" unique_id=2095642054]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_x3hk2")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1572884272]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 184.0
+offset_right = 290.0
+offset_bottom = 395.0
+
+[node name="BtnSetup" type="Button" parent="VBoxContainer" unique_id=209419411]
+layout_mode = 2
+text = "Setup"
+
+[node name="BtnDia" type="Button" parent="VBoxContainer" unique_id=1948194662]
+layout_mode = 2
+text = "Fase do Dia"
+
+[node name="BtnVotacao" type="Button" parent="VBoxContainer" unique_id=1518084245]
+layout_mode = 2
+text = "Votacao"
+
+[node name="BtnNoitePassagem" type="Button" parent="VBoxContainer" unique_id=310842178]
+layout_mode = 2
+text = "Noite Passagem"
+
+[node name="BtnNoiteAcao" type="Button" parent="VBoxContainer" unique_id=618977477]
+layout_mode = 2
+text = "Noite Açao"
+
+[node name="BtnAmanhecer" type="Button" parent="VBoxContainer" unique_id=1981202146]
+layout_mode = 2
+text = "Amanhecer"
+
+[node name="PainelPassagem" type="Panel" parent="." unique_id=2008300132]
+layout_mode = 0
+offset_left = 367.0
+offset_top = 18.0
+offset_right = 767.0
+offset_bottom = 618.0
+
+[node name="BtnSouEu" type="Button" parent="PainelPassagem" unique_id=1390142228]
+layout_mode = 0
+offset_left = 170.0
+offset_top = 278.0
+offset_right = 230.0
+offset_bottom = 309.0
+text = "Sou Eu"
+
+[node name="LabelPassagem" type="Label" parent="PainelPassagem" unique_id=1299856180]
+layout_mode = 0
+offset_left = 91.0
+offset_top = 236.0
+offset_right = 308.0
+offset_bottom = 259.0
+text = "                                                    "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PainelAcao" type="Panel" parent="." unique_id=384124951]
+layout_mode = 0
+offset_left = 366.0
+offset_top = 17.0
+offset_right = 766.0
+offset_bottom = 617.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_x3hk2")
+
+[node name="BtnConfirmarAcao" type="Button" parent="PainelAcao" unique_id=766596865]
+layout_mode = 0
+offset_left = 141.0
+offset_top = 525.0
+offset_right = 270.0
+offset_bottom = 556.0
+text = "Confirmar Açao"
+
+[node name="ScrollContainerPratos" type="ScrollContainer" parent="PainelAcao" unique_id=65332991]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 192.0
+offset_right = 390.0
+offset_bottom = 471.0
+
+[node name="ContainerPratos" type="GridContainer" parent="PainelAcao/ScrollContainerPratos" unique_id=1395073547]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme_override_constants/h_separation = 20
+columns = 3
+
+[node name="ContainerTemperos" type="HBoxContainer" parent="PainelAcao" unique_id=1038313894]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 46.0
+offset_right = 391.0
+offset_bottom = 126.0
+alignment = 1
+
+[node name="BtnSal" type="Button" parent="PainelAcao/ContainerTemperos" unique_id=978676316]
+layout_mode = 2
+text = "     Sal (+1 HP)    "
+
+[node name="BtnPimenta" type="Button" parent="PainelAcao/ContainerTemperos" unique_id=161874300]
+layout_mode = 2
+text = "Pimenta (-1 HP)"
+
+[node name="BtnNenhum" type="Button" parent="PainelAcao/ContainerTemperos" unique_id=2042200155]
+layout_mode = 2
+text = "Nao usar nada"
+
+[node name="LabelAviso" type="Label" parent="PainelAcao" unique_id=1262535631]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 141.0
+offset_right = 374.0
+offset_bottom = 164.0
+text = "Voce decidiu nao usar temperos essa noite."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollContainerPessoas" type="ScrollContainer" parent="PainelAcao" unique_id=1890967208]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 196.0
+offset_right = 387.0
+offset_bottom = 469.0
+
+[node name="ContainerPessoas" type="GridContainer" parent="PainelAcao/ScrollContainerPessoas" unique_id=1978729139]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
+columns = 3
+
+[node name="ContainerEscolhaRato" type="HBoxContainer" parent="PainelAcao" unique_id=584494794]
+visible = false
+layout_mode = 0
+offset_left = 73.0
+offset_top = 46.0
+offset_right = 354.0
+offset_bottom = 126.0
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="BtnCheirarPratos" type="Button" parent="PainelAcao/ContainerEscolhaRato" unique_id=1739347430]
+layout_mode = 2
+text = "Cheirar Pratos
+"
+
+[node name="BtnCheirarPessoas" type="Button" parent="PainelAcao/ContainerEscolhaRato" unique_id=793791453]
+layout_mode = 2
+text = "Cheirar Pessoas"
+
+[node name="PainelInbox" type="ColorRect" parent="." unique_id=1786673369]
+visible = false
+layout_mode = 0
+offset_left = 398.0
+offset_top = 44.0
+offset_right = 741.0
+offset_bottom = 579.0
+color = Color(0, 0, 0, 0.654902)
+
+[node name="LabelMensagemInbox" type="Label" parent="PainelInbox" unique_id=1324845738]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 20.0
+offset_right = 328.0
+offset_bottom = 349.0
+label_settings = SubResource("LabelSettings_x3hk2")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="BtnFecharInbox" type="Button" parent="PainelInbox" unique_id=270791045]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 431.0
+offset_right = 257.0
+offset_bottom = 474.0
+text = "Fechar"
+
+[node name="PainelAmanhecer" type="Panel" parent="." unique_id=896833383]
+visible = false
+layout_mode = 0
+offset_left = 374.0
+offset_top = 33.0
+offset_right = 758.0
+offset_bottom = 594.0
+
+[node name="LabelRelatorio" type="Label" parent="PainelAmanhecer" unique_id=59509179]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 69.0
+offset_right = 378.0
+offset_bottom = 315.0
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="BtnIniciarDia" type="Button" parent="PainelAmanhecer" unique_id=1897075024]
+layout_mode = 0
+offset_left = 89.0
+offset_top = 438.0
+offset_right = 296.0
+offset_bottom = 508.0
+text = "Inciar Discussao"
+
+[node name="PainelDia" type="Panel" parent="." unique_id=1404104441]
+visible = false
+layout_mode = 0
+offset_left = 374.0
+offset_top = 25.0
+offset_right = 757.0
+offset_bottom = 600.0
+
+[node name="LabelRelogio" type="Label" parent="PainelDia" unique_id=327149869]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 83.0
+offset_right = 299.0
+offset_bottom = 286.0
+text = "02:00"
+label_settings = SubResource("LabelSettings_74bqr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TimerDia" type="Timer" parent="PainelDia" unique_id=510300902]
+
+[node name="BtnEncerrarReuniao" type="Button" parent="PainelDia" unique_id=322310038]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 395.0
+offset_right = 293.0
+offset_bottom = 488.0
+text = "Encerrar Reuniao"
+
+[node name="PainelVotacao" type="Panel" parent="." unique_id=194272993]
+visible = false
+layout_mode = 0
+offset_left = 367.0
+offset_top = 22.0
+offset_right = 766.0
+offset_bottom = 616.0
+
+[node name="Label" type="Label" parent="PainelVotacao" unique_id=1413352733]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 25.0
+offset_right = 390.0
+offset_bottom = 105.0
+text = "Quem deve ser expulso?"
+label_settings = SubResource("LabelSettings_ruij7")
+horizontal_alignment = 1
+
+[node name="BtnConfirmarVoto" type="Button" parent="PainelVotacao" unique_id=969970059]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 480.0
+offset_right = 283.0
+offset_bottom = 566.0
+text = "Confirmar Voto"
+
+[node name="ScrollContainerPessoas" type="ScrollContainer" parent="PainelVotacao" unique_id=2070115106]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 167.0
+offset_right = 392.0
+offset_bottom = 432.0
+
+[node name="ContainerPessoas" type="GridContainer" parent="PainelVotacao/ScrollContainerPessoas" unique_id=1817621917]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
+columns = 3
+
+[node name="LabelVotante" type="Label" parent="PainelVotacao" unique_id=943083433]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 71.0
+offset_right = 330.0
+offset_bottom = 151.0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PainelSeguranca" type="Panel" parent="." unique_id=1694226449]
+visible = false
+layout_mode = 0
+offset_left = 394.0
+offset_top = 125.0
+offset_right = 738.0
+offset_bottom = 493.0
+
+[node name="LabelFicha" type="Label" parent="PainelSeguranca" unique_id=1045728678]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 27.0
+offset_right = 301.0
+offset_bottom = 292.0
+horizontal_alignment = 1
+
+[node name="BtnFecharSeguranca" type="Button" parent="PainelSeguranca" unique_id=432812422]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 308.0
+offset_right = 241.0
+offset_bottom = 352.0
+text = "Fechar"
+
+[node name="PainelResultadoVotacao" type="ColorRect" parent="." unique_id=2093170216]
+visible = false
+layout_mode = 0
+offset_left = 367.0
+offset_top = 18.0
+offset_right = 764.0
+offset_bottom = 616.0
+color = Color(0.019607844, 0.019607844, 0.2509804, 1)
+
+[node name="LabelResultado" type="Label" parent="PainelResultadoVotacao" unique_id=1319421532]
+visible = false
+layout_mode = 0
+offset_left = 34.0
+offset_top = 108.0
+offset_right = 358.0
+offset_bottom = 452.0
+label_settings = SubResource("LabelSettings_lb8y5")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="BtnContinuarResultado" type="Button" parent="PainelResultadoVotacao" unique_id=272375111]
+visible = false
+layout_mode = 0
+offset_left = 106.0
+offset_top = 472.0
+offset_right = 290.0
+offset_bottom = 553.0
+text = "Contiuar"
+
+[node name="PainelVitoria" type="Panel" parent="." unique_id=1479431853]
+visible = false
+layout_mode = 0
+offset_left = 366.0
+offset_top = 17.0
+offset_right = 767.0
+offset_bottom = 617.0
+
+[node name="IconeFaccao" type="TextureRect" parent="PainelVitoria" unique_id=1806307662]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 162.0
+offset_right = 305.0
+offset_bottom = 362.0
+
+[node name="Titulo" type="Label" parent="PainelVitoria" unique_id=373751794]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 19.0
+offset_right = 385.0
+offset_bottom = 82.0
+text = "Teste"
+label_settings = SubResource("LabelSettings_ja1os")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Subtitulo" type="Label" parent="PainelVitoria" unique_id=1910900018]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 99.0
+offset_right = 387.0
+offset_bottom = 159.0
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PainelVitoria" unique_id=1300379916]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 376.0
+offset_right = 385.0
+offset_bottom = 525.0
+
+[node name="ListaJogadores" type="Label" parent="PainelVitoria/ScrollContainer" unique_id=557527747]
+layout_mode = 2
+
+[node name="BtnJogarNovamente" type="Button" parent="PainelVitoria" unique_id=289743176]
+layout_mode = 0
+offset_left = 113.0
+offset_top = 531.0
+offset_right = 293.0
+offset_bottom = 574.0
+text = "Jogar Novamente"
+
+[connection signal="pressed" from="PainelVitoria/BtnJogarNovamente" to="." method="_on_btn_jogar_novamente_pressed"]
