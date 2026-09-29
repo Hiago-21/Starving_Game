@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starving</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- CABEÇALHO SUPERIOR FIXO -->
+        <header>
+            <button id="btn-voltar" class="escondido" onclick="abrirTela('tela-home')">⬅ Voltar ao Menu</button>
+            <h1>STARVING</h1>
+            <p>Um jogo de dedução social, blefe e fome.</p>
+        </header>
+
+        <!-- TELA 1: MENU PRINCIPAL -->
+        <div id="tela-home" class="tela ativa">
+            <div class="menu-grid">
+                
+                <div class="menu-card" onclick="abrirTela('tela-lore')">
+                    <div class="menu-icone">01</div>
+                    <h2>A História</h2>
+                    <p>Descubra a lore e como você veio parar neste restaurante.</p>
+                </div>
+
+                <div class="menu-card" onclick="abrirTela('tela-regras')">
+                    <div class="menu-icone">02</div>
+                    <h2>Regras Gerais</h2>
+                    <p>A matemática da fome, pontos de vida e mecânicas globais.</p>
+                </div>
+
+                <div class="menu-card" onclick="abrirTela('tela-personagens')">
+                    <div class="menu-icone">03</div>
+                    <h2>Personagens</h2>
+                    <p>O guia completo de todas as equipes, cargos e interações.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- TELA 2: A HISTÓRIA (LORE) -->
+        <div id="tela-lore" class="tela escondida">
+            <div class="caixa-texto-formatada">
+                <h2>📖 A História</h2>
+                <p>Você acorda trancafiado no salão principal de um restaurante que um dia já foi luxuoso, mas agora tem as portas seladas de forma impenetrável. Você não está sozinho. Ao redor da mesa, outras pessoas se olham com a mesma expressão de pânico.</p>
+                <p>Não há como fugir, e a regra de sobrevivência imposta pelos seus captores é simples: <strong>quem ficar sem comer, morre de fome.</strong></p>
+                <p>Todos os dias, misteriosamente, pratos de comida são colocados nas mesas. O problema é que a comida não é suficiente para manter todos vivos a longo prazo. Pior ainda: no escuro da noite, enquanto a maioria tenta dormir, criaturas e ameaças se esgueiram pelo restaurante para devorar a comida dos outros.</p>
+                <p>Para sobreviver, o grupo precisa conversar durante o dia, descobrir quem está roubando a comida à noite e expulsar os parasitas do restaurante antes que o último prato fique vazio. <em>Em quem você confia quando a fome aperta?</em></p>
+            </div>
+        </div>
+
+
+        <!-- TELA 3: REGRAS E SISTEMA DA FOME -->
+        <div id="tela-regras" class="tela escondida">
+            <div class="caixa-texto-formatada">
+                <h2>⚖️ O Sistema da Fome</h2>
+                <p>O coração do jogo é a gestão de recursos. Diferente de outros jogos de dedução, não há assassinatos diretos noturnos na maioria dos casos; os jogadores morrem por inanição.</p>
+                
+                <ul>
+                    <li><strong>Vida Máxima (HP):</strong> Todos os jogadores começam a partida com <strong>3 HP</strong>. A quantidade de vida de cada um é um segredo absoluto.</li>
+                    <li><strong>O Dano Diário:</strong> Ao amanhecer, o jogo faz uma conta simples. Se o número de <em>pratos intactos</em> na mesa for menor que o número de <em>jogadores famintos</em>, a conta não fecha. O desespero toma conta, e <strong>todos</strong> os famintos perdem 1 de Vida.</li>
+                    <li><strong>Imunidade (Saciados):</strong> Jogadores que conseguirem comer com sucesso durante a noite (como o Guloso ou o Ansioso) não entram na conta dos famintos. Eles acordam saciados e não sofrem o dano de inanição no dia seguinte.</li>
+                </ul>
+
+                <h3>Morte e Expulsão</h3>
+                <p>Se a vida de um jogador chegar a 0, ele morre de inanição. Além disso, todos os dias ocorre o <strong>Tribunal</strong>. Os jogadores debatem e votam em alguém para ser expulso do restaurante. Aquele que receber a maioria dos votos é eliminado imediatamente, independentemente do seu HP.</p>
+            </div>
+        </div>
+
+        <!-- TELA 4: PERSONAGENS E EQUIPES -->
+        <div id="tela-personagens" class="tela escondida">
+            
+            <!-- SEÇÃO DAS AMEAÇAS -->
+            <section class="equipe-ameaca">
+                <div class="equipe-separador ameaca-separador">
+                    <div class="icone-bolinha"></div>
+                    <div class="textos-equipe">
+                        <h2>Equipe das Ameaças</h2>
+                        <p><strong>Objetivo:</strong> Eliminar os Convidados ou igualar o número de sobreviventes na mesa.</p>
+                    </div>
+                </div>
+
+                <div class="card-personagem">
+                    <img src="img/Guloso.jpg" alt="Ícone do Guloso">
+                    <div class="conteudo-personagem">
+                        <h3>O Guloso</h3>
+                        <ul>
+                            <li><b>Ação Noturna:</b> Escolhe 1 prato para devorar.</li>
+                            <li><b>Regras e Efeitos:</b> O prato desaparece da mesa. O Guloso acorda Saciado (imune à fome). Ele não sabe quem é o Rato.</li>
+                            <li><b>Colisão:</b> Se dois Gulosos atacarem o mesmo prato (ou se colidirem com o Ansioso), o prato quebra e ninguém come. Ambos acordam Famintos.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="card-personagem">
+                    <img src="img/Rato.jpg" alt="Ícone do Rato">
+                    <div class="conteudo-personagem">
+                        <h3>O Rato</h3>
+                        <ul>
+                            <li><b>Ação Noturna:</b> Escolhe farejar 1 Pessoa <b>OU</b> farejar até 2 Pratos.</li>
+                            <li><b>Regras e Efeitos:</b> Age antes dos Gulosos. Se cheirar uma pessoa, descobre o cargo exato dela. Se cheirar pratos, envia um alerta secreto aos Gulosos indicando se o Cozinheiro ou o Mordomo mexeram ali.</li>
+                            <li><b>Limitação:</b> Não come à noite. Acorda Faminto. Sabe quem são os Gulosos, mas os Gulosos não sabem quem ele é.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SEÇÃO DOS CONVIDADOS -->
+            <section class="equipe-convidado">
+                <div class="equipe-separador convidado-separador">
+                    <div class="icone-bolinha"></div>
+                    <div class="textos-equipe">
+                        <h2>Equipe dos Convidados</h2>
+                        <p><strong>Objetivo:</strong> Deduzir e expulsar todas as Ameaças antes de morrerem de fome.</p>
+                    </div>
+                </div>
+
+                <div class="card-personagem">
+                    <img src="img/Mordomo.jpg" alt="Ícone do Mordomo">
+                    <div class="conteudo-personagem">
+                        <h3>O Mordomo</h3>
+                        <ul>
+                            <li><b>Ação Noturna:</b> Escolhe 1 prato para proteger.</li>
+                            <li><b>Regras e Efeitos:</b> É o primeiro a agir nos pratos. Bloqueia o roubo do Guloso e cancela o tempero do Cozinheiro. Acorda Faminto.</li>
+                            <li><b>Feedback:</b> No dia seguinte, recebe um aviso em segredo <em>apenas</em> se o seu escudo tiver bloqueado um ataque com sucesso.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card-personagem">
+                    <img src="img/Cozinheiro.jpg" alt="Ícone do Cozinheiro">
+                    <div class="conteudo-personagem">
+                        <h3>O Cozinheiro</h3>
+                        <ul>
+                            <li><b>Ação Noturna:</b> Escolhe 1 prato para temperar com Sal (+1 HP) ou Pimenta (-1 HP).</li>
+                            <li><b>Regras e Efeitos:</b> Possui apenas 2 Sais e 2 Pimentas para o jogo todo. O tempero fica oculto e afeta quem engolir aquele prato de madrugada. Acorda Faminto.</li>
+                            <li><b>Colisão:</b> Se temperar o prato protegido pelo Mordomo, a ação falha e o tempero não é gasto.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card-personagem">
+                    <img src="img/Ansioso.jpg" alt="Ícone do Ansioso">
+                    <div class="conteudo-personagem">
+                        <h3>O Ansioso</h3>
+                        <ul>
+                            <li><b>Ação Noturna:</b> Escolhe 1 prato para devorar por impulso.</li>
+                            <li><b>Regras e Efeitos:</b> O prato não some, mas fica vazio. Ele acorda Saciado (imune à fome coletiva) e engole qualquer tempero que estiver no prato (sofrendo o dano ou a cura).</li>
+                            <li><b>Risco:</b> Não enxerga os alertas do Rato. Se colidir com um Guloso no mesmo prato, o prato quebra e ele acorda Faminto.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card-personagem">
+                    <img src="img/Detetive.jpg" alt="Ícone do Detetive">
+                    <div class="conteudo-personagem">
+                        <h3>O Detetive</h3>
+                        <ul>
+                            <li><b>Ação Noturna:</b> Escolhe 1 jogador para investigar a movimentação.</li>
+                            <li><b>Regras e Efeitos:</b> O aplicativo revela <b>apenas para ele</b> se o alvo "Tocou em um prato" ou "Não tocou em um prato" naquela noite. Acorda Faminto.</li>
+                            <li><b>Risco Letal:</b> Morre instantaneamente se investigar o Egoísta.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card-personagem">
+                    <img src="img/Fofoqueiro.jpg" alt="Ícone do Fofoqueiro">
+                    <div class="conteudo-personagem">
+                        <h3>O Fofoqueiro</h3>
+                        <ul>
+                            <li><b>Ação Noturna:</b> Escolhe 1 jogador para investigar a movimentação.</li>
+                            <li><b>Regras e Efeitos:</b> O Fofoqueiro <b>não</b> recebe a resposta. Ao amanhecer, o aplicativo envia mensagens anônimas para dois outros jogadores aleatórios na mesa (um descobre <em>quem</em> foi o alvo da noite, o outro descobre se o alvo <em>tocou ou não</em> no prato). Acorda Faminto.</li>
+                            <li><b>Risco Letal:</b> Morre instantaneamente se investigar o Egoísta.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card-personagem">
+                    <img src="img/Aristocrata.jpg" alt="Ícone do Aristocrata">
+                    <div class="conteudo-personagem">
+                        <h3>O Aristocrata</h3>
+                        <ul>
+                            <li><b>Ação Noturna:</b> Nenhuma (Dorme e acorda Faminto).</li>
+                            <li><b>Regras e Efeitos (Diurno):</b> O seu voto para expulsão durante a fase do dia tem peso 2.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card-personagem">
+                    <img src="img/Segurança.jpg" alt="Ícone do Segurança">
+                    <div class="conteudo-personagem">
+                        <h3>O Segurança</h3>
+                        <ul>
+                            <li><b>Ação Noturna:</b> Nenhuma (Dorme e acorda Faminto).</li>
+                            <li><b>Regras e Efeitos (Diurno):</b> Nunca é o primeiro nem o último a votar. É posicionado aleatoriamente no meio da fila de votação e consegue enxergar o placar parcial (quem votou em quem) antes de confirmar o seu próprio voto.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SEÇÃO NEUTRA -->
+            <section class="equipe-neutra">
+                <div class="equipe-separador neutra-separador">
+                    <div class="icone-bolinha"></div>
+                    <div class="textos-equipe">
+                        <h2>Equipe Neutra</h2>
+                        <p><strong>Objetivo:</strong> Sobreviver até o final da partida ou ser o único sobrevivente da explosão.</p>
+                    </div>
+                </div>
+
+                <div class="card-personagem">
+                    <img src="img/Egoista.jpg" alt="Ícone do Egoísta">
+                    <div class="conteudo-personagem">
+                        <h3>O Egoísta</h3>
+                        <ul>
+                             <li><b>Ação Noturna:</b> Escolhe 1 jogador como alvo do seu rancor.</li>
+                            <li><b>Regras e Efeitos (Noturno):</b> Elimina o Detetive ou o Fofoqueiro instantaneamente caso seja investigado por eles. Acorda Faminto.</li>
+                            <li><b>Regras e Efeitos (Diurno - O Parasita):</b> Se o jogador que ele marcou à noite acabar sendo o mais votado e expulso pela mesa, o Egoísta sente um imenso prazer e recupera +1 de Vida.</li>
+                            <li><b>Regras e Efeitos (Diurno - O Surto):</b> Se o próprio Egoísta for o jogador com mais votos e acabar expulso da mesa, ele surta e causa dano em área. Todos os vivos perdem 1 de Vida. O jogador que ele marcou à noite perde 2 de Vida. Os pratos são repostos na quantidade exata de sobreviventes.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </div> 
+    </div> 
+
+    <script src="script.js"></script>
+
+</body>
+</html>
